@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Edit task</h1>
+
+    <%= simple_form_for(@task) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :details %>
+    <%= f.input :completed %>
+    <%= f.submit %>
+    <% end %>
+
+    <%= simple_form_for(@task, method: :delete) do |f| %>
+        <%= f.button :submit, "Delete task", class: "delete" %>
+    <% end %>
+    
+    <%= link_to 'Show', @task %> |
+    <%= link_to 'Back', tasks_path %>
+
+</div>
+
