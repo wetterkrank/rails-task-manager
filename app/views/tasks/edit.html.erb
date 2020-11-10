@@ -6,15 +6,11 @@
     <%= f.input :details %>
     <%= f.input :completed %>
     <%= f.button :submit, class: "btn-primary" %>
-    <% end %>
-
-    <%= simple_form_for(@task, method: :delete) do |f| %>
-        <%= f.button :submit, "Delete task", class: "btn-link" %>
+    <%= link_to "Delete task", task_path, method: :delete, class: "btn btn-danger" %>
     <% end %>
     
     <br>
     <%= link_to 'Show', @task %> |
     <%= link_to 'Tasks list', tasks_path %>
-
 </div>
 
